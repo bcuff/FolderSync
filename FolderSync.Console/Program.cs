@@ -16,6 +16,7 @@ namespace FolderSync.Console
             var baseDest = Path.Combine(basePath, @"Dice.Web.Admin");
             var watchers = new[]
             {
+                new FolderSynchronizer($"{baseSource}\\Scripts\\",$"{baseDest}\\Scripts\\CoreScripts\\", "*.js"),
                 new FolderSynchronizer($"{baseSource}\\Content\\",$"{baseDest}\\Content\\CoreContent\\", "*.js"),
                 new FolderSynchronizer($"{baseSource}\\Content\\",$"{baseDest}\\Content\\CoreContent\\", "*.less"),
                 new FolderSynchronizer($"{baseSource}\\Content\\",$"{baseDest}\\Content\\CoreContent\\", "*.css"),
