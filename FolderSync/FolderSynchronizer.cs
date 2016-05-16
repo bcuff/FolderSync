@@ -26,16 +26,22 @@ namespace FolderSync
         public void Start()
         {
             if (_watcher != null) throw new InvalidOperationException("Already started.");
-            _watcher = new FileSystemWatcher(Source, Filter ?? "*.*")
+            _watcher = new FileSystemWatcher(Source, Filter)
             {
-                NotifyFilter = NotifyFilters.FileName,
+                NotifyFilter = NotifyFilters.FileName | NotifyFilters.LastWrite | NotifyFilters.CreationTime,
                 IncludeSubdirectories = true,
             };
             _watcher.Changed += OnChange;
             _watcher.Created += OnChange;
             _watcher.Deleted += OnChange;
             _watcher.Renamed += OnRename;
+            _watcher.Error += OnError;
             _watcher.EnableRaisingEvents = true;
+        }
+
+        private void OnError(object sender, ErrorEventArgs e)
+        {
+            Log(true, $"WATCHER ERROR - ${e.GetException()}");
         }
 
         public event Action<string> Info;
