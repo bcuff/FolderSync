@@ -12,13 +12,15 @@ namespace FolderSync
         public string Source { get; }
         public string Dest { get; }
         public string Filter { get; }
+        public bool Recursive { get; }
         FileSystemWatcher _watcher;
 
-        public FolderSynchronizer(string source, string dest, string filter = null)
+        public FolderSynchronizer(string source, string dest, string filter = null, bool recursive = true)
         {
             Source = Path.GetFullPath(source);
             Dest = Path.GetFullPath(dest);
             Filter = filter;
+            Recursive = recursive;
 
             if (!Source.EndsWith("\\")) Source += "\\";
         }
@@ -29,7 +31,7 @@ namespace FolderSync
             _watcher = new FileSystemWatcher(Source, Filter)
             {
                 NotifyFilter = NotifyFilters.FileName | NotifyFilters.LastWrite | NotifyFilters.CreationTime,
-                IncludeSubdirectories = true,
+                IncludeSubdirectories = Recursive,
             };
             _watcher.Changed += OnChange;
             _watcher.Created += OnChange;

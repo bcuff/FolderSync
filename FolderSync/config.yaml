@@ -1,0 +1,25 @@
+areas:
+  - base: C:\Users\Brandon\src\with-buddies-server
+    base_source: WithBuddies.Web.Admin.Core
+    base_dest: Dice.Web.Admin
+    policies:
+    - source: Scripts\
+      dest: Scripts\CoreScripts\
+      filter: '*.js'
+      recursive: true
+    - source: Content\
+      dest: Content\CoreContent\
+      filter: '*.js'
+      recursive: true
+    - source: Content\
+      dest: Content\CoreContent\
+      filter: '*.less'
+      recursive: true
+    - source: Content\
+      dest: Content\CoreContent\
+      filter: '*.css'
+      recursive: true
+    - source: Views\
+      dest: Views\CoreViews\
+      filter: '*.cshtml'
+      recursive: true

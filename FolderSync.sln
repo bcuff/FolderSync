@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FolderSync", "FolderSync\FolderSync.csproj", "{0AD8BBD9-07A5-4C76-B0AA-5184EE880722}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FolderSync.Console", "FolderSync.Console\FolderSync.Console.csproj", "{04F509CE-7C73-427A-89FA-F6566BAF9111}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +15,6 @@ Global
 		{0AD8BBD9-07A5-4C76-B0AA-5184EE880722}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0AD8BBD9-07A5-4C76-B0AA-5184EE880722}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0AD8BBD9-07A5-4C76-B0AA-5184EE880722}.Release|Any CPU.Build.0 = Release|Any CPU
-		{04F509CE-7C73-427A-89FA-F6566BAF9111}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{04F509CE-7C73-427A-89FA-F6566BAF9111}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{04F509CE-7C73-427A-89FA-F6566BAF9111}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{04F509CE-7C73-427A-89FA-F6566BAF9111}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
