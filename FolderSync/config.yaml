@@ -1,7 +1,7 @@
 areas:
-  - base: C:\Users\Brandon\src\with-buddies-server
-    base_source: WithBuddies.Web.Admin.Core
-    base_dest: Dice.Web.Admin
+  - base: C:\Users\bcuff\src
+    base_source: with-buddies-server\WithBuddies.Web.Admin.Core
+    base_dest: Dice-Server\Dice.Web.Admin
     policies:
     - source: Scripts\
       dest: Scripts\CoreScripts\
